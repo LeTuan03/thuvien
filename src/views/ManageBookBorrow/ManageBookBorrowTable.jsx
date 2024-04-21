@@ -9,7 +9,7 @@ import {
     Card,
     Button
 } from '@mui/material';
-import { IconCreditCard, IconEdit, IconTrash } from '@tabler/icons';
+import { IconCreditCard } from '@tabler/icons';
 import { chuyenNgayThanhChuoi, dinhDangTien } from 'src/AppConst';
 
 function ManageBookBorrowTable(props) {

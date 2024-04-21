@@ -7,7 +7,6 @@ import {
     TableHead,
     TableRow,
     Card,
-    useTheme,
     Button
 } from '@mui/material';
 import { IconEdit, IconTrash } from '@tabler/icons';
@@ -19,7 +18,6 @@ function ManageBookTable(props) {
         handleOpenDelete
     } = props;
 
-    const theme = useTheme();
     return (
 
         <Card sx={{ mt: 2 }}>

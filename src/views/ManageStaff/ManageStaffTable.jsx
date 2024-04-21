@@ -6,9 +6,7 @@ import {
     TableCell,
     TableHead,
     TableRow,
-    Chip,
     Card,
-    useTheme,
     Button
 } from '@mui/material';
 import { IconEdit, IconTrash } from '@tabler/icons';

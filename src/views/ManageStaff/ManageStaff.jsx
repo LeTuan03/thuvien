@@ -8,19 +8,6 @@ import { deleteStaff, getAlllStaff } from './ManageStaffServices';
 import { toast } from 'react-toastify';
 
 const ManageStaff = () => {
-
-    const data = [
-        {
-            id: "1",
-            name: "Sunil Joshi",
-            post: "Web Designer",
-            pname: "Elite Admin",
-            priority: "Low",
-            pbg: "primary.main",
-            budget: "3.9",
-        }
-    ];
-
     const [item, setItem] = useState(null);
     const [listitem, setListItem] = useState([]);
     const [open, setOpen] = useState(false);

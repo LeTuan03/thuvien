@@ -5,7 +5,6 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import Grid from '@mui/material/Grid';
-import Autocomplete from '@mui/material/Autocomplete';
 import { useEffect, useState } from 'react';
 import { insertStaff, updateStaff } from './ManageStaffServices';
 import { toast } from 'react-toastify';
@@ -27,10 +26,10 @@ export default function ManageStaffDialog(props) {
     const handleSubmit = async () => {
         try {
             if (state?.staff_id) {
-                const data = await updateStaff(state);
+                await updateStaff(state);
                 toast.success("Cập nhật thành công")
             } else {
-                const data = await insertStaff(state)
+                await insertStaff(state)
                 toast.success("Thêm mới thành công")
             }
         } catch (error) {
