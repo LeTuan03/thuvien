@@ -40,10 +40,10 @@ export default function ManageBookDialog(props) {
         try {
             const dataSubmit = convertData(state);
             if (state?.book_id) {
-                const data = await updateBook(dataSubmit);
+                await updateBook(dataSubmit);
                 toast.success("Cập nhật thành công")
             } else {
-                const data = await insertBook(dataSubmit);
+                await insertBook(dataSubmit);
                 toast.success("Thêm mới thành công")
             }
         } catch (error) {

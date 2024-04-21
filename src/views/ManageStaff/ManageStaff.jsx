@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, Card, useTheme } from '@mui/material';
+import { Button, Card } from '@mui/material';
 import PageContainer from 'src/components/container/PageContainer';
 import ManageStaffTable from './ManageStaffTable';
 import ManageStaffDialog from './ManageStaffDialog';
@@ -49,7 +49,7 @@ const ManageStaff = () => {
 
     const handleYesDelete = async () => {
         try {
-            const data = await deleteStaff(item?.staff_id);
+            await deleteStaff(item?.staff_id);
             toast.success("Xóa thành công")
         } catch (error) {
 

@@ -6,7 +6,6 @@ import {
     TableCell,
     TableHead,
     TableRow,
-    Chip,
     Card,
     useTheme,
     Button
@@ -107,14 +106,6 @@ function ManageBookTable(props) {
                                             <Typography variant="subtitle2" fontWeight={600}>
                                                 {product?.title}
                                             </Typography>
-                                            {/* <Typography
-                                                color="textSecondary"
-                                                sx={{
-                                                    fontSize: "13px",
-                                                }}
-                                            >
-                                                {product.post}
-                                            </Typography> */}
                                         </Box>
                                     </Box>
                                 </TableCell>
@@ -138,20 +129,6 @@ function ManageBookTable(props) {
                                         {product?.availableQuantity}
                                     </Typography>
                                 </TableCell>
-                                {/* <TableCell align="center">
-                                    <Chip
-                                        sx={{
-                                            px: "4px",
-                                            backgroundColor: product.pbg,
-                                            color: "#fff",
-                                        }}
-                                        size="small"
-                                        label={product.priority}
-                                    ></Chip>
-                                </TableCell>
-                                <TableCell align="right">
-                                    <Typography variant="h6">${product.budget}k</Typography>
-                                </TableCell> */}
                             </TableRow>
                         ))}
                     </TableBody>

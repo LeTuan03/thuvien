@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, Card } from '@mui/material';
+import { Button, Card } from '@mui/material';
 import PageContainer from 'src/components/container/PageContainer';
 import ManageBookTable from './ManageBookTable';
 import ManageBookDialog from './ManageBookDialog';
@@ -35,7 +35,7 @@ const ManageBook = () => {
 
     const handleYesDelete = async () => {
         try {
-            const data = await deleteBook(item?.book_id);
+            await deleteBook(item?.book_id);
             toast.success("Xóa thành công")
         } catch (error) {
 

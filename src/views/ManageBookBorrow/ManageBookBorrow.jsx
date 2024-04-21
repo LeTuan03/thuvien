@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, Card, useTheme } from '@mui/material';
+import { Button, Card } from '@mui/material';
 import PageContainer from 'src/components/container/PageContainer';
 import ManageBookBorrowTable from './ManageBookBorrowTable';
 import ManageBookBorrowDialog from './ManageBookBorrowDialog';
-import ConfirmDialog from '../components/ConfirmDialog';
 import { trasach, listMuonSach } from './ManageBookBorrowServices';
 import { toast } from 'react-toastify';
 import ConfirmDialogCustom from '../components/ConfirmDialogCustom';
@@ -40,7 +39,7 @@ const ManageBookBorrow = () => {
             let formData = new FormData();
             formData.append("BookID", item?.book?.book_id);
             formData.append("code", item?.libraryCard?.code);
-            const data = await trasach(formData);
+            await trasach(formData);
             toast.success("Trả sách thành công")
         } catch (error) {
 

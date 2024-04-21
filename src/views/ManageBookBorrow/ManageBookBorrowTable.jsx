@@ -6,9 +6,7 @@ import {
     TableCell,
     TableHead,
     TableRow,
-    Chip,
     Card,
-    useTheme,
     Button
 } from '@mui/material';
 import { IconCreditCard, IconEdit, IconTrash } from '@tabler/icons';
@@ -17,7 +15,6 @@ import { chuyenNgayThanhChuoi, dinhDangTien } from 'src/AppConst';
 function ManageBookBorrowTable(props) {
     let {
         data,
-        handleEdit,
         handleOpenDelete
     } = props;
 

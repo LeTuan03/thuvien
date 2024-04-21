@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, Card, useTheme } from '@mui/material';
+import { Button, Card } from '@mui/material';
 import PageContainer from 'src/components/container/PageContainer';
 import ManageCardTable from './ManageCardTable';
 import ManageCardDialog from './ManageCardDialog';
@@ -37,7 +37,7 @@ const ManageCard = () => {
 
     const handleYesDelete = async () => {
         try {
-            const data = await deleteCard(item?.card_id);
+            await deleteCard(item?.card_id);
             toast.success("Xóa thành công")
         } catch (error) {
 

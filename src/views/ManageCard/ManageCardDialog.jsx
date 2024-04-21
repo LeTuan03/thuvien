@@ -5,7 +5,6 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import Grid from '@mui/material/Grid';
-import Autocomplete from '@mui/material/Autocomplete';
 import { useEffect, useState } from 'react';
 import { addCard, editCard } from './ManageCardServices';
 import { toast } from 'react-toastify';
@@ -34,10 +33,10 @@ export default function ManageCardDialog(props) {
     const handleSubmit = async () => {
         try {
             if (state?.card_id) {
-                const data = await editCard(formatDataSunmit(state));
+                await editCard(formatDataSunmit(state));
                 toast.success("Cập nhật thành công")
             } else {
-                const data = await addCard(formatDataSunmit(state));
+                await addCard(formatDataSunmit(state));
                 toast.success("Thêm mới thành công")
             }
         } catch (error) {

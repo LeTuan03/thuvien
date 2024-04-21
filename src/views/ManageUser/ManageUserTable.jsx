@@ -6,12 +6,10 @@ import {
     TableCell,
     TableHead,
     TableRow,
-    Chip,
     Card,
-    useTheme,
     Button
 } from '@mui/material';
-import { IconEdit, IconEye, IconTrash } from '@tabler/icons';
+import { IconEye } from '@tabler/icons';
 
 function ManageGenreTable(props) {
     let {

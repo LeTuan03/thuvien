@@ -3,19 +3,17 @@ import { Card } from '@mui/material';
 import PageContainer from 'src/components/container/PageContainer';
 import ManageUserTable from './ManageUserTable';
 import ManageUserDialog from './ManageUserDialog';
-import { deleteGenre, getAllUser } from './ManageUserServices';
+import { getAllUser } from './ManageUserServices';
 
 const ManageUser = () => {
 
     const [item, setItem] = useState(null);
     const [listitem, setListItem] = useState([]);
     const [open, setOpen] = useState(false);
-    const [openDelete, setOpenDelete] = useState(false);
 
 
     const handleClose = () => {
         setOpen(false);
-        setOpenDelete(false);
     };
 
     const handleEdit = (value) => {

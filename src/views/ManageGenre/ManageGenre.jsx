@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, Card, useTheme } from '@mui/material';
+import { Button, Card } from '@mui/material';
 import PageContainer from 'src/components/container/PageContainer';
 import ManageGenreTable from './ManageGenreTable';
 import ManageGenreDialog from './ManageGenreDialog';
@@ -37,7 +37,7 @@ const ManageGenre = () => {
 
     const handleYesDelete = async () => {
         try {
-            const data = await deleteGenre(item?.genre_id);
+            await deleteGenre(item?.genre_id);
             toast.success("Xóa thành công")
         } catch (error) {
 

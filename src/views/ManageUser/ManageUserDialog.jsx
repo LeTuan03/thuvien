@@ -5,7 +5,6 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import Grid from '@mui/material/Grid';
-import Autocomplete from '@mui/material/Autocomplete';
 import { useEffect, useState } from 'react';
 import { insertUser, updateGenre } from './ManageUserServices';
 
@@ -25,9 +24,9 @@ export default function ManageUserDialog(props) {
     const handleSubmit = async () => {
         try {
             if (state?.genre_id) {
-                const data = await updateGenre(state);
+                await updateGenre(state);
             } else {
-                const data = await insertUser(state)
+                await insertUser(state)
             }
         } catch (error) {
 

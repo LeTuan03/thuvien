@@ -40,10 +40,10 @@ export default function ManageBookBorrowDialog(props) {
     const handleSubmit = async () => {
         try {
             if (state?.genre_id) {
-                const data = await updateGenre(state);
+                await updateGenre(state);
                 toast.success("Cập nhật thành công")
             } else {
-                const data = await muonsach(formatDataSubmit(state));
+                await muonsach(formatDataSubmit(state));
                 toast.success("Thêm mới thành công")
             }
         } catch (error) {
